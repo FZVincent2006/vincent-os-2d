@@ -10,10 +10,12 @@ import SoftwareProjects from '../showcase/projects/Software';
 import MusicProjects from '../showcase/projects/Music';
 import VerticalNavbar from '../showcase/VerticalNavbar';
 import useInitialWindowSize from '../../hooks/useInitialWindowSize';
+import { useLanguage } from '../../i18n/LanguageProvider';
 
 export interface ShowcaseExplorerProps extends WindowAppProps {}
 
 const ShowcaseExplorer: React.FC<ShowcaseExplorerProps> = (props) => {
+    const { t } = useLanguage();
     const { initWidth, initHeight } = useInitialWindowSize({ margin: 100 });
 
     return (
@@ -22,12 +24,12 @@ const ShowcaseExplorer: React.FC<ShowcaseExplorerProps> = (props) => {
             left={56}
             width={initWidth}
             height={initHeight}
-            windowTitle="Vincent Fang"
+            windowTitle={t('showcase.windowTitle')}
             windowBarIcon="windowExplorerIcon"
             closeWindow={props.onClose}
             onInteract={props.onInteract}
             minimizeWindow={props.onMinimize}
-            bottomLeftText={'© Copyright 2026 Vincent Fang'}
+            bottomLeftText={t('showcase.copyright')}
         >
             <Router>
                 <div className="site-page">

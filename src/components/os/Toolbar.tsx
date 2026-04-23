@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import Colors from '../../constants/colors';
 import { Icon } from '../general';
+import { useLanguage } from '../../i18n/LanguageProvider';
 // import { } from '../general';
 // import Home from '../site/Home';
 // import Window from './Window';
@@ -16,6 +17,8 @@ const Toolbar: React.FC<ToolbarProps> = ({
     toggleMinimize,
     shutdown,
 }) => {
+    const { t, toggleLanguage } = useLanguage();
+
     const getTime = () => {
         const date = new Date();
         let hours = date.getHours();
@@ -110,9 +113,7 @@ const Toolbar: React.FC<ToolbarProps> = ({
                                     style={styles.startMenuIcon}
                                     icon="computerBig"
                                 />
-                                <p style={styles.startMenuText}>
-                                    Sh<u>u</u>t down...
-                                </p>
+                                <p style={styles.startMenuText}>{t('toolbar.shutdown')}</p>
                             </div>
                         </div>
                     </div>
@@ -140,7 +141,7 @@ const Toolbar: React.FC<ToolbarProps> = ({
                                 icon="windowsStartIcon"
                                 style={styles.startIcon}
                             />
-                            <p className="toolbar-text ">Start</p>
+                            <p className="toolbar-text ">{t('toolbar.start')}</p>
                         </div>
                     </div>
                     <div style={styles.toolbarTabsContainer}>
@@ -180,9 +181,18 @@ const Toolbar: React.FC<ToolbarProps> = ({
                         })}
                     </div>
                 </div>
-                <div style={styles.time}>
+                <div style={styles.rightControls}>
+                    <button
+                        className="site-button"
+                        style={styles.languageButton}
+                        onMouseDown={toggleLanguage}
+                    >
+                        {t('common.switchLanguage')}
+                    </button>
+                    <div style={styles.time}>
                     <Icon style={styles.volumeIcon} icon="volumeOn" />
                     <p style={styles.timeText}>{time}</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -363,6 +373,19 @@ const styles: StyleSheetCSS = {
         justifyContent: 'space-between',
         alignItems: 'center',
         borderLeftColor: Colors.darkGray,
+    },
+    rightControls: {
+        alignItems: 'center',
+        gap: 4,
+        marginRight: 4,
+    },
+    languageButton: {
+        height: 24,
+        minWidth: 68,
+        padding: '0 8px',
+        fontSize: 12,
+        fontFamily: 'MSSerif',
+        lineHeight: '24px',
     },
     volumeIcon: {
         cursor: 'pointer',

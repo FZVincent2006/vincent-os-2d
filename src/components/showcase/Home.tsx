@@ -3,10 +3,12 @@ import { Link } from '../general';
 
 import forhire from '../../assets/pictures/forHireGif.gif';
 import { useNavigate } from 'react-router';
+import { useLanguage } from '../../i18n/LanguageProvider';
 
 export interface HomeProps {}
 
 const Home: React.FC<HomeProps> = (props) => {
+    const { t } = useLanguage();
     const navigate = useNavigate();
 
     const goToContact = () => {
@@ -17,24 +19,28 @@ const Home: React.FC<HomeProps> = (props) => {
         <div style={styles.page}>
             <div style={styles.header}>
                 <h1 style={styles.name}>Vincent Fang</h1>
-                <h2>Music AI Travel</h2>
+                <h2>{t('showcase.home.subtitle')}</h2>
             </div>
             <div style={styles.buttons}>
-                <Link containerStyle={styles.link} to="about" text="ABOUT" />
+                <Link
+                    containerStyle={styles.link}
+                    to="about"
+                    text={t('showcase.home.about')}
+                />
                 <Link
                     containerStyle={styles.link}
                     to="experience"
-                    text="EXPERIENCE"
+                    text={t('showcase.home.experience')}
                 />
                 <Link
                     containerStyle={styles.link}
                     to="projects"
-                    text="PROJECTS"
+                    text={t('showcase.home.projects')}
                 />
                 <Link
                     containerStyle={styles.link}
                     to="contact"
-                    text="CONTACT"
+                    text={t('showcase.home.contact')}
                 />
             </div>
             <div style={styles.forHireContainer} onMouseDown={goToContact}>

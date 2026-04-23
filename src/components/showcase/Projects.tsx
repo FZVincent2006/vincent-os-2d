@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router';
 import software from '../../assets/pictures/projects/software.gif';
 import music from '../../assets/pictures/projects/music.gif';
+import { useLanguage } from '../../i18n/LanguageProvider';
 
 export interface ProjectsProps {}
 
@@ -64,29 +65,30 @@ const ProjectBox: React.FC<ProjectBoxProps> = ({
 };
 
 const Projects: React.FC<ProjectsProps> = (props) => {
+    const { t } = useLanguage();
+    
     return (
         <div className="site-page-content">
-            <h1>Projects</h1>
-            <h3>& Hobbies</h3>
+            <h1>{t('showcase.projects.pageTitle')}</h1>
+            <h3>{t('showcase.projects.pageSubtitle')}</h3>
             <br />
             <p>
-                Click on one of the areas below to check out some of my favorite
-                projects I've done in that field.
+                {t('showcase.projects.pageIntro')}
             </p>
             <br />
             <div style={styles.projectLinksContainer}>
                 <ProjectBox
                     icon={software}
                     iconStyle={styles.computerIcon}
-                    title="Software"
-                    subtitle="PROJECTS"
+                    title={t('showcase.projects.softwareTitle')}
+                    subtitle={t('showcase.projects.softwareSubtitle')}
                     route="software"
                 />
                 <ProjectBox
                     icon={music}
                     iconStyle={styles.musicIcon}
-                    title="Music"
-                    subtitle="VENTURES"
+                    title={t('showcase.projects.musicTitle')}
+                    subtitle={t('showcase.projects.musicSubtitle')}
                     route="music"
                 />
             </div>
