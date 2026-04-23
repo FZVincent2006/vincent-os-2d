@@ -1,8 +1,5 @@
-import React, { useEffect, useState, useCallback } from 'react';
+import React, { useEffect, useState } from 'react';
 import colors from '../../constants/colors';
-import twitterIcon from '../../assets/pictures/contact-twitter.png';
-import ghIcon from '../../assets/pictures/contact-gh.png';
-import inIcon from '../../assets/pictures/contact-in.png';
 import ResumeDownload from './ResumeDownload';
 
 export interface ContactProps {}
@@ -15,20 +12,7 @@ const validateEmail = (email: string) => {
     return re.test(String(email).toLowerCase());
 };
 
-interface SocialBoxProps {
-    icon: string;
-    link: string;
-}
-
-const SocialBox: React.FC<SocialBoxProps> = ({ link, icon }) => {
-    return (
-        <a rel="noreferrer" target="_blank" href={link}>
-            <div className="big-button-container" style={styles.social}>
-                <img src={icon} alt="" style={styles.socialImage} />
-            </div>
-        </a>
-    );
-};
+const CONTACT_API_URL = '';
 
 const Contact: React.FC<ContactProps> = (props) => {
     const [company, setCompany] = useState('');
@@ -49,6 +33,11 @@ const Contact: React.FC<ContactProps> = (props) => {
     }, [email, name, message]);
 
     async function submitForm() {
+        if (!CONTACT_API_URL) {
+            setFormMessage('Contact form is temporarily disabled. Please use email.');
+            setFormMessageColor(colors.red);
+            return;
+        }
         if (!isFormValid) {
             setFormMessage('Form unable to validate, please try again.');
             setFormMessageColor('red');
@@ -57,7 +46,7 @@ const Contact: React.FC<ContactProps> = (props) => {
         try {
             setIsLoading(true);
             const res = await fetch(
-                'https://api.henryheffernan.com/api/contact',
+                CONTACT_API_URL,
                 {
                     method: 'POST',
                     headers: {
@@ -113,33 +102,17 @@ const Contact: React.FC<ContactProps> = (props) => {
         <div className="site-page-content">
             <div style={styles.header}>
                 <h1>Contact</h1>
-                <div style={styles.socials}>
-                    <SocialBox
-                        icon={ghIcon}
-                        link={'https://github.com/henryjeff'}
-                    />
-                    <SocialBox
-                        icon={inIcon}
-                        link={'https://www.linkedin.com/in/henryheffernan/'}
-                    />
-                    <SocialBox
-                        icon={twitterIcon}
-                        link={'https://twitter.com/henryheffernan'}
-                    />
-                </div>
             </div>
             <div className="text-block">
                 <p>
-                    I am currently employed, however if you have any
-                    opportunities, feel free to reach out - I would love to
-                    chat! You can reach me via my personal email, or fill out
-                    the form below!
+                    If you want to connect, feel free to reach out. You can
+                    email me directly, or leave a message below.
                 </p>
                 <br />
                 <p>
                     <b>Email: </b>
-                    <a href="mailto:henryheffernan@gmail.com">
-                        henryheffernan@gmail.com
+                    <a href="mailto:15070654315@163.com">
+                        15070654315@163.com
                     </a>
                 </p>
 
@@ -205,7 +178,7 @@ const Contact: React.FC<ContactProps> = (props) => {
                             className="site-button"
                             style={styles.button}
                             type="submit"
-                            disabled={!isFormValid || isLoading}
+                            disabled={!isFormValid || isLoading || !CONTACT_API_URL}
                             onMouseDown={submitForm}
                         >
                             {!isLoading ? (
@@ -225,7 +198,7 @@ const Contact: React.FC<ContactProps> = (props) => {
                                     <sub>
                                         {formMessage
                                             ? `${formMessage}`
-                                            : ' All messages get forwarded straight to my personal email'}
+                                            : ' Contact API not configured. Please use email for now.'}
                                     </sub>
                                 </b>
                             </p>

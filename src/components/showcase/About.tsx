@@ -1,34 +1,30 @@
 import React from 'react';
-import me from '../../assets/pictures/workingAtComputer.jpg';
-import meNow from '../../assets/pictures/currentme.jpg';
-import { Link } from 'react-router-dom';
+import eShan from '../../assets/pictures/珠峰.jpg';
+import namCo from '../../assets/pictures/纳木错.jpg';
+import n1 from '../../assets/pictures/N1.png';
 import ResumeDownload from './ResumeDownload';
 
 export interface AboutProps {}
 
 const About: React.FC<AboutProps> = (props) => {
     return (
-        // add on resize listener
         <div className="site-page-content">
-            {/* <img src={me} style={styles.topImage} alt="" /> */}
             <h1 style={{ marginLeft: -16 }}>Welcome</h1>
-            <h3>I'm Henry Heffernan</h3>
+            <h3>I'm Vincent Fang</h3>
             <br />
             <div className="text-block">
                 <p>
-                    I'm a software engineer currently working at Vercel! In May
-                    of 2022 I graduated from Rensselaer Polytechnic Institute
-                    with my BS in Computer Science.
+                    Hello, I'm Vincent Fang. I am a hustler currently exploring
+                    AI, business models, and connecting talent.
                 </p>
                 <br />
                 <p>
-                    Thank you for taking the time to check out my portfolio. I
-                    really hope you enjoy exploring it as much as I enjoyed
-                    building it. If you have any questions or comments, feel
-                    free to contact me using{' '}
-                    <Link to="/contact">this form</Link> or shoot me an email at{' '}
-                    <a href="mailto:henryheffernan@gmail.com">
-                        henryheffernan@gmail.com
+                    I am studying at the University of Science and Technology
+                    Beijing (USTB) and also serve as the founder of Talentry.
+                    If you have any questions or comments, feel free to reach
+                    out by email at{' '}
+                    <a href="mailto:15070654315@163.com">
+                        15070654315@163.com
                     </a>
                 </p>
             </div>
@@ -37,121 +33,99 @@ const About: React.FC<AboutProps> = (props) => {
                 <h3>About Me</h3>
                 <br />
                 <p>
-                    From a young age, I have had a curiosity about how things
-                    worked. This naturally led me to become absolutely obsessed
-                    with Lego and I fell in love with building things. In
-                    elementary school, I joined the Lego Robotics team at my
-                    local middle school, which was my first real exposure to
-                    programming. In 2008, my family and I moved across the
-                    country from California to New York, where I attended middle
-                    school, high school, and college.
+                    Since high school, I have been intensely curious about
+                    things outside the "rules". To escape the boring sea of
+                    test papers, I built a custom sliding slot under my desk to
+                    hide my phone and see the outside world. During my senior
+                    year, to get my ticket to Beijing and aim for the Finance
+                    Department at Renmin University, I shaved my head and
+                    locked myself away to study for three months. Although my
+                    gaokao results were not perfect, I made it to Beijing as I
+                    wished.
+                </p>
+                <br />
+                <p>
+                    I firmly believe that curiosity and relentless,
+                    stop-at-nothing execution are the master keys to breaking
+                    any system.
+                </p>
+                <br />
+                <h3>First Pot of Gold & Entrepreneurial Instinct</h3>
+                <br />
+                <p>
+                    After the 2024 gaokao, my family rejected my plan to travel
+                    to Tibet, but I did not give up. I noticed the immense
+                    anxiety parents had about their kids falling behind during
+                    summer break. Leveraging poster campaigns and the
+                    endorsement of being an outstanding senior, I quickly
+                    gathered a top-tier student base. In just 15 days, by
+                    integrating the teaching abilities of my classmates, I
+                    earned my first 100,000 RMB.
                 </p>
                 <br />
                 <div className="captioned-image">
-                    <img src={me} style={styles.image} alt="" />
+                    <img src={eShan} style={styles.image} alt="珠峰" />
                     <p>
                         <sub>
-                            <b>Figure 1:</b> A real photo of me developing this
-                            website :)
+                            <b>Figure 1:</b> 珠峰
                         </sub>
                     </p>
                 </div>
-
-                <p>
-                    I started programming more seriously in high school,
-                    initially learning how to scrape and interact with websites.
-                    I went on to do a ton of passion projects, many of them with
-                    one of my closest friends,{' '}
-                    <a
-                        rel="noreferrer"
-                        target="_blank"
-                        href="https://www.linkedin.com/in/scott-bass-189a7919b/"
-                    >
-                        Scott Bass
-                    </a>
-                    . We worked on many projects together, including chat bots,
-                    multiple game projects, apps, and more. One of these
-                    projects is viewable on my{' '}
-                    <Link to="/projects/software">Software Projects</Link> page.
-                </p>
                 <br />
-                <p>
-                    In 2017, I got accepted into Rennselear Polytechnic
-                    Institute to study Computer Science. It was my first choice
-                    and I was absolutely ecstatic to be going to such a great
-                    university. At the end of my sophomore year, I got an
-                    internship working for the startup Hover, primarily focusing
-                    on frontend work. I continued to work at Hover on and off
-                    for about a year and a half, until the start of my senior
-                    year when I decided to focus on other opportunities.
-                </p>
-                <br />
-                <br />
-                <div style={{}}>
-                    <div
-                        style={{
-                            flex: 1,
-                            textAlign: 'justify',
-                            alignSelf: 'center',
-                            flexDirection: 'column',
-                        }}
-                    >
-                        <h3>My Hobbies</h3>
-                        <br />
-                        <p>
-                            Beyond software, I have a lot of hobbies that I
-                            enjoy doing in my free time. The more tangible
-                            hobbies I have are{' '}
-                            <Link to="/projects/music">Music Production</Link>{' '}
-                            and creating{' '}
-                            <Link to="/projects/art">Digital Art</Link>. You can
-                            read more about each of these on their respective
-                            pages under my projects tab. Some other hobbies I
-                            enjoy are working out, cooking, and (unsurprisingly)
-                            playing video games.
-                        </p>
-                        <br />
-                        <p>
-                            In college, I was an active member in the fraternity
-                            Sigma Alpha Epsilon and held multiple positions in
-                            the chapter. I met a lot of amazing people through
-                            my fraternity and thoroughly enjoyed the community.
-                        </p>
-                    </div>
-                    <div style={styles.verticalImage}>
-                        <img src={meNow} style={styles.image} alt="" />
-                        <p>
-                            <sub>
-                                <b>Figure 2:</b> Me, April 2022
-                            </sub>
-                        </p>
-                    </div>
+                <div className="captioned-image">
+                    <img src={namCo} style={styles.image} alt="纳木错" />
+                    <p>
+                        <sub>
+                            <b>Figure 2:</b> 纳木错
+                        </sub>
+                    </p>
                 </div>
                 <br />
-                <br />
                 <p>
-                    Thanks for reading about me! I hope that you enjoy exploring
-                    the rest of my portfolio website and everything it has to
-                    offer. If you find the easter egg make sure to let me know
-                    on twitter{' '}
-                    <a
-                        rel="noreferrer"
-                        target="_blank"
-                        href="https://twitter.com/henryheffernan"
-                    >
-                        @henryheffernan
-                    </a>{' '}
-                    Good luck and have fun!
+                    This experience made me realize my true talent lies not
+                    just in solving problems, but in finding leverage and
+                    building ecosystems.
                 </p>
                 <br />
+                <h3>AI, Code & Hackathons</h3>
+                <br />
                 <p>
-                    If you have any questions or comments I would love to hear
-                    them. You can reach me through the{' '}
-                    <Link to="/contact">contact page</Link> or shoot me an email
-                    at{' '}
-                    <a href="mailto:henryheffernan@gmail.com">
-                        henryheffernan@gmail.com
-                    </a>
+                    Entering college, I quickly became disillusioned with
+                    traditional GPA routines and fully embraced AI and coding. I
+                    participated in foundational LLM research with members of
+                    DeepSeek, and even reverse-engineered our school's SSO
+                    gateway during a hackathon. I gradually realized my true
+                    comparative advantage lies not in resonating with machines,
+                    but in engaging with people.
+                </p>
+                <br />
+                <figure style={styles.photoFigure}>
+                    <img src={n1} style={styles.photoThumb} alt="N1" />
+                    <figcaption style={styles.photoCaption}>
+                        <sub>
+                            <b>Figure 3:</b> N1
+                        </sub>
+                    </figcaption>
+                </figure>
+                <br />
+                <p>
+                    Over the past few months, I led the execution of the
+                    Openclaw competition, which featured a prize pool exceeding
+                    one million RMB, and secured nearly ten million RMB in
+                    government event funding in collaboration with Beijing
+                    Zhongguancun College. I believe high-density talent
+                    collisions are the fastest catalyst for personal growth.
+                </p>
+                <br />
+                <h3>Looking Forward</h3>
+                <br />
+                <p>
+                    I will never stop hustling and exploring. In the process of
+                    seeking PMF (product-market fit), I am also striving to
+                    find my personal pmf (people-mission fit). I am currently
+                    exploring this path, which is exactly the original
+                    intention behind founding Talentry: to help everyone grow
+                    rapidly, and in doing so, to help myself.
                 </p>
             </div>
         </div>
@@ -167,21 +141,18 @@ const styles: StyleSheetCSS = {
         height: 'auto',
         width: '100%',
     },
-    topImage: {
-        height: 'auto',
+    photoFigure: {
         width: '100%',
-        marginBottom: 32,
+        margin: 0,
     },
-    verticalImage: {
-        alignSelf: 'center',
-        // width: '80%',
-        marginLeft: 32,
-        flex: 0.8,
-
-        alignItems: 'center',
-        // marginBottom: 32,
+    photoThumb: {
+        width: '100%',
+        height: 'auto',
+        borderRadius: 8,
+    },
+    photoCaption: {
         textAlign: 'center',
-        flexDirection: 'column',
+        marginTop: 6,
     },
 };
 

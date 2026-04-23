@@ -8,7 +8,6 @@ import Projects from '../showcase/Projects';
 import Contact from '../showcase/Contact';
 import SoftwareProjects from '../showcase/projects/Software';
 import MusicProjects from '../showcase/projects/Music';
-import ArtProjects from '../showcase/projects/Art';
 import VerticalNavbar from '../showcase/VerticalNavbar';
 import useInitialWindowSize from '../../hooks/useInitialWindowSize';
 
@@ -23,12 +22,12 @@ const ShowcaseExplorer: React.FC<ShowcaseExplorerProps> = (props) => {
             left={56}
             width={initWidth}
             height={initHeight}
-            windowTitle="Henry Heffernan - Showcase 2022"
+            windowTitle="Vincent Fang"
             windowBarIcon="windowExplorerIcon"
             closeWindow={props.onClose}
             onInteract={props.onInteract}
             minimizeWindow={props.onMinimize}
-            bottomLeftText={'© Copyright 2022 Henry Heffernan'}
+            bottomLeftText={'© Copyright 2026 Vincent Fang'}
         >
             <Router>
                 <div className="site-page">
@@ -47,7 +46,6 @@ const ShowcaseExplorer: React.FC<ShowcaseExplorerProps> = (props) => {
                             path="/projects/music"
                             element={<MusicProjects />}
                         />
-                        <Route path="/projects/art" element={<ArtProjects />} />
                     </Routes>
                 </div>
             </Router>

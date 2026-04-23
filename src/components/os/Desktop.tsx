@@ -56,7 +56,7 @@ const APPLICATIONS: {
     },
     henordle: {
         key: 'henordle',
-        name: 'Henordle',
+        name: 'Vinordle',
         shortcutIcon: 'henordleIcon',
         component: Henordle,
     },
