@@ -1,4 +1,11 @@
-import React, { createContext, useCallback, useContext, useEffect, useMemo, useState } from 'react';
+import React, {
+    createContext,
+    useCallback,
+    useContext,
+    useEffect,
+    useMemo,
+    useState,
+} from 'react';
 import { Language, translations, TranslationTree } from './translations';
 
 interface LanguageContextValue {
@@ -10,15 +17,22 @@ interface LanguageContextValue {
 
 const STORAGE_KEY = 'site.language';
 
-const LanguageContext = createContext<LanguageContextValue | undefined>(undefined);
+const LanguageContext = createContext<LanguageContextValue | undefined>(
+    undefined,
+);
 
-const getNestedValue = (obj: TranslationTree, key: string): string | undefined => {
-    const value = key.split('.').reduce<string | TranslationTree | undefined>((acc, part) => {
-        if (!acc || typeof acc === 'string') {
-            return undefined;
-        }
-        return acc[part];
-    }, obj);
+const getNestedValue = (
+    obj: TranslationTree,
+    key: string,
+): string | undefined => {
+    const value = key
+        .split('.')
+        .reduce<string | TranslationTree | undefined>((acc, part) => {
+            if (!acc || typeof acc === 'string') {
+                return undefined;
+            }
+            return acc[part];
+        }, obj);
 
     return typeof value === 'string' ? value : undefined;
 };
@@ -33,8 +47,12 @@ const getInitialLanguage = (): Language => {
     return browserLanguage.startsWith('zh') ? 'zh' : 'en';
 };
 
-export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-    const [language, setLanguageState] = useState<Language>(() => getInitialLanguage());
+export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({
+    children,
+}) => {
+    const [language, setLanguageState] = useState<Language>(() =>
+        getInitialLanguage(),
+    );
 
     const setLanguage = useCallback((nextLanguage: Language) => {
         setLanguageState(nextLanguage);
@@ -47,14 +65,16 @@ export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ chil
     const t = useCallback(
         (key: string) => {
             const languageValue = getNestedValue(translations[language], key);
-            if (languageValue) {
+            // If a translation exists (including empty string), return it. Only undefined means missing.
+            if (languageValue !== undefined) {
                 return languageValue;
             }
 
             const fallbackValue = getNestedValue(translations.en, key);
-            return fallbackValue || key;
+            // If English fallback exists, return it; otherwise return empty string to avoid exposing the key.
+            return fallbackValue ?? '';
         },
-        [language]
+        [language],
     );
 
     useEffect(() => {
@@ -69,10 +89,14 @@ export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ chil
             toggleLanguage,
             t,
         }),
-        [language, setLanguage, toggleLanguage, t]
+        [language, setLanguage, toggleLanguage, t],
     );
 
-    return <LanguageContext.Provider value={value}>{children}</LanguageContext.Provider>;
+    return (
+        <LanguageContext.Provider value={value}>
+            {children}
+        </LanguageContext.Provider>
+    );
 };
 
 export const useLanguage = (): LanguageContextValue => {

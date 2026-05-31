@@ -10,7 +10,9 @@ export interface ExperienceProps {}
 
 const Experience: React.FC<ExperienceProps> = (props) => {
     const { t } = useLanguage();
-    
+    const indieTitle = t('showcase.experience.indieTitle');
+    const showIndie = indieTitle.trim() !== '';
+
     return (
         <div className="site-page-content">
             <ResumeDownload />
@@ -70,30 +72,34 @@ const Experience: React.FC<ExperienceProps> = (props) => {
                 </ul>
             </div>
 
-            <div style={styles.headerContainer}>
-                <div style={styles.header}>
-                    <div style={styles.headerRow}>
-                        <h1>{t('showcase.experience.indieTitle')}</h1>
-                        <h4>{t('showcase.experience.indieRole')}</h4>
+            {showIndie && (
+                <>
+                    <div style={styles.headerContainer}>
+                        <div style={styles.header}>
+                            <div style={styles.headerRow}>
+                                <h1>{t('showcase.experience.indieTitle')}</h1>
+                                <h4>{t('showcase.experience.indieRole')}</h4>
+                            </div>
+                            <div style={styles.headerRow}>
+                                <h3>{t('showcase.experience.indieTitle')}</h3>
+                                <b>
+                                    <p>{t('showcase.experience.indieDate')}</p>
+                                </b>
+                            </div>
+                        </div>
                     </div>
-                    <div style={styles.headerRow}>
-                        <h3>{t('showcase.experience.indieTitle')}</h3>
-                        <b>
-                            <p>{t('showcase.experience.indieDate')}</p>
-                        </b>
+                    <div className="text-block">
+                        <ul>
+                            <li>
+                                <p>{t('showcase.experience.indiePoint1')}</p>
+                            </li>
+                            <li>
+                                <p>{t('showcase.experience.indiePoint2')}</p>
+                            </li>
+                        </ul>
                     </div>
-                </div>
-            </div>
-            <div className="text-block">
-                <ul>
-                    <li>
-                        <p>{t('showcase.experience.indiePoint1')}</p>
-                    </li>
-                    <li>
-                        <p>{t('showcase.experience.indiePoint2')}</p>
-                    </li>
-                </ul>
-            </div>
+                </>
+            )}
 
             <div style={styles.headerContainer}>
                 <div style={styles.header}>
@@ -138,7 +144,9 @@ const Experience: React.FC<ExperienceProps> = (props) => {
                     </li>
                 </ul>
                 <br />
-                <h3 style={styles.indent}>{t('showcase.experience.hackathonTitle')}</h3>
+                <h3 style={styles.indent}>
+                    {t('showcase.experience.hackathonTitle')}
+                </h3>
                 <ul>
                     <li>
                         <p>{t('showcase.experience.hackathon1')}</p>
@@ -163,7 +171,9 @@ const Experience: React.FC<ExperienceProps> = (props) => {
                     />
                 </div>
                 <br />
-                <h3 style={styles.indent}>{t('showcase.experience.hackerTitle')}</h3>
+                <h3 style={styles.indent}>
+                    {t('showcase.experience.hackerTitle')}
+                </h3>
                 <ul>
                     <li>
                         <p>{t('showcase.experience.hackerPoint1')}</p>
