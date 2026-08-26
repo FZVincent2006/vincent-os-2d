@@ -1,6 +1,7 @@
 {
-    "short_name": "Vincent Fang",
-    "name": "Vincent Fang FZOS Portfolio",
+    "short_name": "FZOS",
+    "name": "Vincent Fang — FZOS",
+    "description": "Vincent Fang's interactive 2D portfolio desktop.",
     "icons": [
         {
             "src": "favicon.ico",

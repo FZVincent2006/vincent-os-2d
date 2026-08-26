@@ -27,7 +27,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "test:api": "tsx --test tests/contact-api.test.mjs",
+    "test:api": "node --import tsx --test tests/*.test.mjs",
     "eject": "react-scripts eject"
   },
   "engines": {
