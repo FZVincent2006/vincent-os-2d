@@ -1,6 +1,4 @@
-import React from 'react';
-import { useEffect } from 'react';
-import { useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { Link as RouterLink, useNavigate, useLocation } from 'react-router-dom';
 
 export interface LinkProps {
@@ -28,24 +26,27 @@ const Link: React.FC<LinkProps> = (props) => {
     }, [location, props.to]);
 
     const [active, setActive] = useState(false);
+    const timers = useRef<number[]>([]);
 
-    const handleClick = (e: any) => {
-        let isMounted = true;
-        e.preventDefault();
+    useEffect(
+        () => () => {
+            timers.current.forEach((timer) => window.clearTimeout(timer));
+            timers.current = [];
+        },
+        [],
+    );
+
+    const handleClick = (event: React.MouseEvent<HTMLAnchorElement>) => {
+        event.preventDefault();
         setActive(true);
         if (location.pathname !== `/${props.to}`) {
-            setTimeout(() => {
-                if (isMounted) navigate(`/${props.to}`);
-            }, 100);
+            timers.current.push(
+                window.setTimeout(() => navigate(`/${props.to}`), 100),
+            );
         }
-        let t = setTimeout(() => {
-            if (isMounted) setActive(false);
-        }, 100);
-
-        return () => {
-            isMounted = false;
-            clearTimeout(t);
-        };
+        timers.current.push(
+            window.setTimeout(() => setActive(false), 100),
+        );
     };
 
     return (

@@ -12,24 +12,22 @@ export interface ToolbarProps {
     shutdown: () => void;
 }
 
+const getTime = () => {
+    const date = new Date();
+    let hours = date.getHours();
+    const minutes = date.getMinutes();
+    const amPm = hours >= 12 ? 'PM' : 'AM';
+    hours = hours % 12 || 12;
+    const mins = minutes < 10 ? `0${minutes}` : minutes;
+    return `${hours}:${mins} ${amPm}`;
+};
+
 const Toolbar: React.FC<ToolbarProps> = ({
     windows,
     toggleMinimize,
     shutdown,
 }) => {
     const { t, toggleLanguage } = useLanguage();
-
-    const getTime = () => {
-        const date = new Date();
-        let hours = date.getHours();
-        let minutes = date.getMinutes();
-        let amPm = hours >= 12 ? 'PM' : 'AM';
-        hours = hours % 12;
-        hours = hours ? hours : 12;
-        let mins = minutes < 10 ? '0' + minutes : minutes;
-        const strTime = hours + ':' + mins + ' ' + amPm;
-        return strTime;
-    };
 
     const [startWindowOpen, setStartWindowOpen] = useState(false);
     const lastClickInside = useRef(false);
@@ -50,16 +48,13 @@ const Toolbar: React.FC<ToolbarProps> = ({
 
     const [time, setTime] = useState(getTime());
 
-    const updateTime = () => {
-        setTime(getTime());
-        setTimeout(() => {
-            updateTime();
-        }, 5000);
-    };
-
     useEffect(() => {
-        updateTime();
-    });
+        const intervalId = window.setInterval(
+            () => setTime(getTime()),
+            5000,
+        );
+        return () => window.clearInterval(intervalId);
+    }, []);
 
     const onCheckClick = () => {
         if (lastClickInside.current) {
