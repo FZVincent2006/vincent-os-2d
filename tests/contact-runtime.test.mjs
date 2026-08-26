@@ -9,17 +9,22 @@ import { build } from 'esbuild';
 
 const projectRoot = fileURLToPath(new URL('..', import.meta.url));
 
-test('declares the bundled contact function as an ES module in production', async () => {
+test('loads the transpiled contact module graph in production', async () => {
   const outputDirectory = await mkdtemp(
     join(projectRoot, '.contact-runtime-test-'),
   );
-  const outputFile = join(outputDirectory, 'contact.js');
+  const outputFile = join(outputDirectory, 'api/contact.js');
 
   try {
     await build({
-      entryPoints: [join(projectRoot, 'api/contact.ts')],
-      outfile: outputFile,
-      bundle: true,
+      entryPoints: [
+        join(projectRoot, 'api/contact.ts'),
+        join(projectRoot, 'api/_contactHandler.ts'),
+        join(projectRoot, 'src/contact/contactPayload.ts'),
+      ],
+      outbase: projectRoot,
+      outdir: outputDirectory,
+      bundle: false,
       format: 'esm',
       platform: 'node',
       target: 'node24',
@@ -38,7 +43,7 @@ test('declares the bundled contact function as an ES module in production', asyn
     assert.equal(
       result.status,
       0,
-      `Bundled contact function failed to load:\n${result.stderr}`,
+      `Transpiled contact function failed to load:\n${result.stderr}`,
     );
     assert.doesNotMatch(result.stderr, /MODULE_TYPELESS_PACKAGE_JSON/);
   } finally {

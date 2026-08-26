@@ -1,6 +1,6 @@
 import { Resend } from 'resend';
 
-import { createContactHandler } from './_contactHandler.ts';
+import { createContactHandler } from './_contactHandler.js';
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 

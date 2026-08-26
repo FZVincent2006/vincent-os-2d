@@ -2,7 +2,7 @@ import {
   isFilledHoneypot,
   parseContactSubmission,
   type ContactSubmission,
-} from '../src/contact/contactPayload.ts';
+} from '../src/contact/contactPayload.js';
 
 export interface ContactEmail {
   from: string;
