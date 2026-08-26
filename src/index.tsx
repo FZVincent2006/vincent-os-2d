@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import '@fontsource/dotgothic16/japanese-400';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
