@@ -134,6 +134,11 @@ Move timer ownership to refs and clear every pending timer in an effect cleanup.
 Navigation behavior and the short active-state animation remain unchanged. The
 repair must not alter route destinations or visual styling.
 
+The desktop `Toolbar` also starts a new recursive clock timeout after every
+render. Replace it with one interval created by an effect with an empty
+dependency list, and clear that interval on unmount. The visible five-second
+clock refresh cadence remains unchanged.
+
 ## Localization Boundary
 
 The language switch applies to text owned by the React application:
