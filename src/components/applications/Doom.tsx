@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
 import DosPlayer from '../dos/DosPlayer';
 import Window from '../os/Window';
+import { useLanguage } from '../../i18n/LanguageProvider';
 
 export interface DoomAppProps extends WindowAppProps {}
 
 const DoomApp: React.FC<DoomAppProps> = (props) => {
+    const { t } = useLanguage();
     const [width, setWidth] = useState(980);
     const [height, setHeight] = useState(670);
 
@@ -14,10 +16,10 @@ const DoomApp: React.FC<DoomAppProps> = (props) => {
             left={10}
             width={width}
             height={height}
-            windowTitle="Doom"
+            windowTitle={t('desktop.apps.doom')}
             windowBarColor="#1C1C1C"
             windowBarIcon="windowGameIcon"
-            bottomLeftText={'Powered by JSDOS & DOSBox'}
+            bottomLeftText={t('desktop.poweredBy')}
             closeWindow={props.onClose}
             onInteract={props.onInteract}
             minimizeWindow={props.onMinimize}

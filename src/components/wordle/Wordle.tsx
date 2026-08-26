@@ -2,9 +2,11 @@ import React, { useEffect, useState } from 'react';
 import { motion, useAnimation } from 'framer-motion';
 import WORDS from './Words';
 import { Easing } from '../general/Animation';
+import { useLanguage } from '../../i18n/LanguageProvider';
 
 export interface KeyboardLetterProps {
     letter: string;
+    label: string;
     word: string;
     guesses: string[];
     currentGuess: string;
@@ -14,6 +16,7 @@ export interface KeyboardLetterProps {
 
 const KeyboardLetter: React.FC<KeyboardLetterProps> = ({
     letter,
+    label,
     guesses,
     word,
     currentGuess,
@@ -70,7 +73,7 @@ const KeyboardLetter: React.FC<KeyboardLetterProps> = ({
                 notInWord && { backgroundColor: 'gray' }
             )}
         >
-            <p>{letter}</p>
+            <p>{label}</p>
         </div>
     );
 };
@@ -214,6 +217,7 @@ const ROWS = [TOP_ROW, MIDDLE_ROW, BOTTOM_ROW];
 const ALPHABET = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 
 const Wordle: React.FC<WordleProps> = () => {
+    const { t } = useLanguage();
     const word = 'VINCE';
     const [guesses, setGuesses] = useState<string[]>([]);
     const [gameOver, setGameOver] = useState(false);
@@ -273,8 +277,8 @@ const Wordle: React.FC<WordleProps> = () => {
     return (
         <div style={styles.container}>
             <div style={styles.header}>
-                <h2>Vinordle</h2>
-                <p>Wordle but with a VINCE based twist.</p>
+                <h2>{t('vinordle.title')}</h2>
+                <p>{t('vinordle.description')}</p>
             </div>
             <motion.div
                 variants={gameOverAnimations}
@@ -286,8 +290,10 @@ const Wordle: React.FC<WordleProps> = () => {
                     gameOver && { zIndex: 1000 }
                 )}
             >
-                <h2>{won ? 'You win!' : 'Game Over'}</h2>
-                <p>Thanks for playing! Remember: the word is always "VINCE"!</p>
+                <h2>
+                    {won ? t('vinordle.win') : t('vinordle.gameOver')}
+                </h2>
+                <p>{t('vinordle.thanks')}</p>
                 <br />
                 <GuessWord
                     key={'winning-guess'}
@@ -299,7 +305,7 @@ const Wordle: React.FC<WordleProps> = () => {
                 />
                 <br />
                 <div className="site-button" onMouseDown={restart}>
-                    Restart Game
+                    {t('vinordle.restart')}
                 </div>
             </motion.div>
             <motion.div
@@ -329,6 +335,13 @@ const Wordle: React.FC<WordleProps> = () => {
                                     setGuesses={setGuesses}
                                     guesses={guesses}
                                     letter={letter}
+                                    label={
+                                        letter === 'RET'
+                                            ? t('vinordle.enter')
+                                            : letter === 'DEL'
+                                            ? t('vinordle.delete')
+                                            : letter
+                                    }
                                     currentGuess={currentGuess}
                                     setCurrentGuess={setCurrentGuess}
                                 />

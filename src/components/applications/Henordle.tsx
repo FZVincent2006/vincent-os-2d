@@ -1,10 +1,13 @@
 import React from 'react';
 import Window from '../os/Window';
 import Wordle from '../wordle/Wordle';
+import { useLanguage } from '../../i18n/LanguageProvider';
 
 export interface HenordleAppProps extends WindowAppProps {}
 
 const HenordleApp: React.FC<HenordleAppProps> = (props) => {
+    const { t } = useLanguage();
+
     return (
         <Window
             top={20}
@@ -12,11 +15,11 @@ const HenordleApp: React.FC<HenordleAppProps> = (props) => {
             width={600}
             height={860}
             windowBarIcon="windowGameIcon"
-            windowTitle="Vinordle"
+            windowTitle={t('desktop.apps.vinordle')}
             closeWindow={props.onClose}
             onInteract={props.onInteract}
             minimizeWindow={props.onMinimize}
-            bottomLeftText={'© Copyright 2026 Vincent Fang'}
+            bottomLeftText={t('showcase.copyright')}
         >
             <div className="site-page">
                 <Wordle />

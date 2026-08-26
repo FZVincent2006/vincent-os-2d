@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Window from '../os/Window';
 import { useInterval } from 'usehooks-ts';
 import { motion } from 'framer-motion';
+import { useLanguage } from '../../i18n/LanguageProvider';
 
 export interface CreditsProps extends WindowAppProps {}
 
@@ -44,6 +45,7 @@ const CREDITS = [
 ];
 
 const Credits: React.FC<CreditsProps> = (props) => {
+    const { t } = useLanguage();
     const [currentSlide, setCurrentSlide] = useState(0);
     const [time, setTime] = useState(0);
 
@@ -73,19 +75,19 @@ const Credits: React.FC<CreditsProps> = (props) => {
             left={48}
             width={1100}
             height={800}
-            windowTitle="Credits"
+            windowTitle={t('desktop.apps.credits')}
             windowBarIcon="windowExplorerIcon"
             closeWindow={props.onClose}
             onInteract={props.onInteract}
             minimizeWindow={props.onMinimize}
-            bottomLeftText={'© Copyright 2026 Vincent Fang'}
+            bottomLeftText={t('showcase.copyright')}
         >
             <div
                 onMouseDown={nextSlide}
                 className="site-page"
                 style={styles.credits}
             >
-                <h2>Credits</h2>
+                <h2>{t('desktop.apps.credits')}</h2>
                 <p>Vincent Fang Portfolio, 2026</p>
                 <br />
                 <br />

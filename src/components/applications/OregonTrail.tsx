@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
 import DosPlayer from '../dos/DosPlayer';
 import Window from '../os/Window';
+import { useLanguage } from '../../i18n/LanguageProvider';
 
 export interface OregonTrailAppProps extends WindowAppProps {}
 
 const OregonTrailApp: React.FC<OregonTrailAppProps> = (props) => {
+    const { t } = useLanguage();
     const [width, setWidth] = useState(920);
     const [height, setHeight] = useState(750);
 
@@ -14,10 +16,10 @@ const OregonTrailApp: React.FC<OregonTrailAppProps> = (props) => {
             left={10}
             width={width}
             height={height}
-            windowTitle="The Oregon Trail"
+            windowTitle={t('desktop.apps.trail')}
             windowBarIcon="windowGameIcon"
             windowBarColor="#240C00"
-            bottomLeftText={'Powered by JSDOS & DOSBox'}
+            bottomLeftText={t('desktop.poweredBy')}
             closeWindow={props.onClose}
             onInteract={props.onInteract}
             minimizeWindow={props.onMinimize}

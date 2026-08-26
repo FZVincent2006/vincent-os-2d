@@ -1,19 +1,22 @@
 import React from 'react';
 import printer from '../../assets/resume/printer.gif';
 import Resume from '../../assets/resume/fz.pdf';
+import { useLanguage } from '../../i18n/LanguageProvider';
 
 export interface ResumeDownloadProps {
     altText?: string;
 }
 
 const ResumeDownload: React.FC<ResumeDownloadProps> = ({ altText }) => {
+    const { t } = useLanguage();
+
     return (
         <div style={styles.resumeContainer}>
             <img style={styles.resumePrinter} alt="" src={printer} />
             <div style={styles.resumeContainerText}>
-                <h3>{altText ? altText : 'Looking for my resume?'}</h3>
+                <h3>{altText || t('showcase.resume.prompt')}</h3>
                 <a rel="noreferrer" target="_blank" href={Resume}>
-                    <p>Click here to download it!</p>
+                    <p>{t('showcase.resume.download')}</p>
                 </a>
             </div>
         </div>

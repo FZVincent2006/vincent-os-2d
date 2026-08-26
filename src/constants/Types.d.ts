@@ -13,7 +13,7 @@ declare type DesktopWindows = {
         zIndex: number;
         component: React.ReactElement;
         minimized: boolean;
-        name: string;
+        nameKey: string;
         icon: IconName;
     };
 };

@@ -114,6 +114,7 @@ test('shows a Chinese generic error instead of exposing provider details', async
     expect(
         await screen.findByText('发送失败，请稍后重试。'),
     ).toBeInTheDocument();
+    expect(screen.getByText('点击下载简历')).toBeInTheDocument();
     expect(screen.queryByText('private provider detail')).not.toBeInTheDocument();
     await waitFor(() => expect(global.fetch).toHaveBeenCalledTimes(1));
 });

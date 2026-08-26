@@ -173,7 +173,7 @@ const Toolbar: React.FC<ToolbarProps> = ({
                                             style={styles.tabIcon}
                                         />
                                         <p style={styles.tabText}>
-                                            {windows[key].name}
+                                            {t(windows[key].nameKey)}
                                         </p>
                                     </div>
                                 </div>

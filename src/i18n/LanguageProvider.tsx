@@ -37,6 +37,19 @@ const getNestedValue = (
     return typeof value === 'string' ? value : undefined;
 };
 
+export const translate = (
+    language: Language,
+    key: string,
+    source: Record<Language, TranslationTree> = translations,
+): string => {
+    const activeValue = getNestedValue(source[language], key);
+    if (activeValue !== undefined) {
+        return activeValue;
+    }
+
+    return getNestedValue(source.en, key) ?? '';
+};
+
 const getInitialLanguage = (): Language => {
     const stored = localStorage.getItem(STORAGE_KEY);
     if (stored === 'en' || stored === 'zh') {
@@ -63,17 +76,7 @@ export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({
     }, []);
 
     const t = useCallback(
-        (key: string) => {
-            const languageValue = getNestedValue(translations[language], key);
-            // If a translation exists (including empty string), return it. Only undefined means missing.
-            if (languageValue !== undefined) {
-                return languageValue;
-            }
-
-            const fallbackValue = getNestedValue(translations.en, key);
-            // If English fallback exists, return it; otherwise return empty string to avoid exposing the key.
-            return fallbackValue ?? '';
-        },
+        (key: string) => translate(language, key),
         [language],
     );
 

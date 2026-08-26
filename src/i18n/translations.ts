@@ -14,6 +14,27 @@ export const translations: Record<Language, TranslationTree> = {
             start: 'Start',
             shutdown: 'Shut down...',
         },
+        desktop: {
+            apps: {
+                showcase: 'My Showcase',
+                trail: 'The Oregon Trail',
+                doom: 'Doom',
+                scrabble: 'Scrabble',
+                vinordle: 'Vinordle',
+                credits: 'Credits',
+            },
+            poweredBy: 'Powered by JSDOS & DOSBox',
+        },
+        vinordle: {
+            title: 'Vinordle',
+            description: 'A word puzzle with a VINCE twist.',
+            win: 'You win!',
+            gameOver: 'Game Over',
+            thanks: 'Thanks for playing! Remember: the word is always "VINCE"!',
+            restart: 'Restart Game',
+            enter: 'Enter',
+            delete: 'Delete',
+        },
         showcase: {
             windowTitle: 'Vincent Fang',
             copyright: '© Copyright 2026 Vincent Fang',
@@ -33,6 +54,10 @@ export const translations: Record<Language, TranslationTree> = {
                 experience: 'EXPERIENCE',
                 projects: 'PROJECTS',
                 contact: 'CONTACT',
+            },
+            resume: {
+                prompt: 'Looking for my resume?',
+                download: 'Click to download my resume',
             },
             about: {
                 welcome: 'Welcome',
@@ -176,6 +201,27 @@ export const translations: Record<Language, TranslationTree> = {
             start: '开始',
             shutdown: '关机...',
         },
+        desktop: {
+            apps: {
+                showcase: '我的作品集',
+                trail: '俄勒冈之旅',
+                doom: '毁灭战士',
+                scrabble: '拼字游戏',
+                vinordle: 'Vinordle',
+                credits: '制作人员',
+            },
+            poweredBy: '由 JSDOS 与 DOSBox 驱动',
+        },
+        vinordle: {
+            title: 'Vinordle',
+            description: '带有 VINCE 彩蛋的文字猜谜。',
+            win: '你赢了！',
+            gameOver: '游戏结束',
+            thanks: '感谢体验！记住：答案永远是“VINCE”！',
+            restart: '重新开始',
+            enter: '回车',
+            delete: '删除',
+        },
         showcase: {
             windowTitle: '方文森',
             copyright: '© 版权所有 2026 方文森',
@@ -195,6 +241,10 @@ export const translations: Record<Language, TranslationTree> = {
                 experience: '经历',
                 projects: '项目',
                 contact: '联系',
+            },
+            resume: {
+                prompt: '想看我的简历吗？',
+                download: '点击下载简历',
             },
             about: {
                 welcome: '欢迎',
