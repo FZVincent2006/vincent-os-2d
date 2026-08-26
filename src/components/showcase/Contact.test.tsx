@@ -116,5 +116,10 @@ test('shows a Chinese generic error instead of exposing provider details', async
     ).toBeInTheDocument();
     expect(screen.getByText('点击下载简历')).toBeInTheDocument();
     expect(screen.queryByText('private provider detail')).not.toBeInTheDocument();
+    expect(screen.getByLabelText(/您的姓名：/)).toHaveValue('方文森');
+    expect(screen.getByLabelText(/邮箱：/)).toHaveValue(
+        'vincent@example.com',
+    );
+    expect(screen.getByLabelText(/留言：/)).toHaveValue('你好');
     await waitFor(() => expect(global.fetch).toHaveBeenCalledTimes(1));
 });

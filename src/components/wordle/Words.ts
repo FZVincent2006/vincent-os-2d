@@ -5756,6 +5756,7 @@ const WORDS = [
     'rumba',
     'biffy',
     'pupal',
+    'vince',
 ];
 
 export default WORDS;
