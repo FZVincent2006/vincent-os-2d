@@ -221,8 +221,8 @@ export const translations: Record<Language, TranslationTree> = {
             delete: '删除',
         },
         showcase: {
-            windowTitle: '方文森',
-            copyright: '© 版权所有 2026 方文森',
+            windowTitle: '方正',
+            copyright: '© 版权所有 2026 方正',
             nav: {
                 showcase: '作品集 26',
                 home: '首页',
