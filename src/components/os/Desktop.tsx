@@ -10,7 +10,6 @@ import Toolbar from './Toolbar';
 import DesktopShortcut, { DesktopShortcutProps } from './DesktopShortcut';
 import Scrabble from '../applications/Scrabble';
 import { IconName } from '../../assets/icons';
-import Credits from '../applications/Credits';
 import { useLanguage } from '../../i18n/LanguageProvider';
 
 export interface DesktopProps {}
@@ -60,12 +59,6 @@ const APPLICATIONS: {
         nameKey: 'desktop.apps.vinordle',
         shortcutIcon: 'henordleIcon',
         component: Henordle,
-    },
-    credits: {
-        key: 'credits',
-        nameKey: 'desktop.apps.credits',
-        shortcutIcon: 'credits',
-        component: Credits,
     },
 };
 
