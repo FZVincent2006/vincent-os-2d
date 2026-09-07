@@ -27,12 +27,6 @@ const About: React.FC<AboutProps> = (props) => {
             </div>
             <ResumeDownload />
             <div className="text-block">
-                <h3>{t('showcase.about.aboutMeTitle')}</h3>
-                <br />
-                <p>{t('showcase.about.aboutMe1')}</p>
-                <br />
-                <p>{t('showcase.about.aboutMe2')}</p>
-                <br />
                 <h3>{t('showcase.about.goldPotTitle')}</h3>
                 <br />
                 <p>{t('showcase.about.goldPot1')}</p>
@@ -55,8 +49,6 @@ const About: React.FC<AboutProps> = (props) => {
                     </p>
                 </div>
                 <br />
-                <p>{t('showcase.about.goldPot2')}</p>
-                <br />
                 <h3>{t('showcase.about.aiCodeTitle')}</h3>
                 <br />
                 <p>{t('showcase.about.aiCode1')}</p>
@@ -69,8 +61,6 @@ const About: React.FC<AboutProps> = (props) => {
                         </sub>
                     </figcaption>
                 </figure>
-                <br />
-                <p>{t('showcase.about.aiCode2')}</p>
                 <br />
                 <h3>{t('showcase.about.lookingForwardTitle')}</h3>
                 <br />

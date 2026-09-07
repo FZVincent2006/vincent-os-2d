@@ -62,74 +62,51 @@ export const translations: Record<Language, TranslationTree> = {
                 welcome: 'Welcome',
                 greeting: "I'm Vincent Fang",
                 hustler:
-                    "Hello, I'm Vincent Fang. I am a hustler currently exploring AI, business models, and connecting talent.",
-                role: 'I am studying at the University of Science and Technology Beijing (USTB) and also serve as the founder of Talentry. If you have any questions or comments, feel free to reach out by email at',
-                aboutMeTitle: 'About Me',
-                aboutMe1:
-                    'Since high school, I have been intensely curious about things outside the "rules". To escape the boring sea of test papers, I built a custom sliding slot under my desk to hide my phone and see the outside world. During my senior year, to get my ticket to Beijing and aim for the Finance Department at Renmin University, I shaved my head and locked myself away to study for three months. Although my gaokao results were not perfect, I made it to Beijing as I wished.',
-                aboutMe2:
-                    'I firmly believe that curiosity and relentless, stop-at-nothing execution are the master keys to breaking any system.',
-                goldPotTitle: 'First Pot of Gold & Entrepreneurial Instinct',
+                    "Hello, I'm Vincent Fang. I love experimenting with AI agents, exploring business models, and connecting talented people.",
+                role: "I'm an undergraduate majoring in Communication Engineering at the University of Science and Technology Beijing (USTB), where I enrolled in 2024. I'm currently interning at ZhenFund and running a brand called Talentry. If you have any questions or comments, feel free to reach out by email at",
+                goldPotTitle: 'First Pot of Gold',
                 goldPot1:
-                    'After the 2024 gaokao, my family rejected my plan to travel to Tibet, but I did not give up. I noticed the immense anxiety parents had about their kids falling behind during summer break. Leveraging poster campaigns and the endorsement of being an outstanding senior, I quickly gathered a top-tier student base. In just 15 days, by integrating the teaching abilities of my classmates, I earned my first 100,000 RMB.',
-                goldPot2:
-                    'This experience made me realize my true talent lies not just in solving problems, but in finding leverage and building ecosystems.',
-                aiCodeTitle: 'AI, Code & Hackathons',
+                    'Ever since I was a child, I have been curious about things outside the "rules". After the 2024 gaokao, when my family turned down my plan to travel to Tibet, I started looking for ways to earn money. Taking inspiration from New Oriental\'s education business model, I earned my first six-figure sum in half a month.',
+                aiCodeTitle: 'About AI',
                 aiCode1:
-                    "Entering college, I quickly became disillusioned with traditional GPA routines and fully embraced AI and coding. I participated in foundational LLM research with members of DeepSeek, and even reverse-engineered our school's SSO gateway during a hackathon. I gradually realized my true comparative advantage lies not in resonating with machines, but in engaging with people.",
-                aiCode2:
-                    'Over the past few months, I led the execution of the Openclaw competition, which featured a prize pool exceeding one million RMB, and secured nearly ten million RMB in government event funding in collaboration with Beijing Zhongguancun College. I believe high-density talent collisions are the fastest catalyst for personal growth.',
+                    "In my second year of high school, when I was feeling disengaged from school, I often went online looking for new and interesting things. That was how I stumbled upon GPT and began exploring AI. At university, I explored on my own: building software, reading papers... I also did research alongside a group of outstanding peers. Over time, though, I realized that my comparative strength was not in connecting with machines, but in talking with people.",
                 lookingForwardTitle: 'Looking Forward',
                 lookingForward:
-                    'I will never stop hustling and exploring. In the process of seeking PMF (product-market fit), I am also striving to find my personal pmf (people-mission fit). I am currently exploring this path, which is exactly the original intention behind founding Talentry: to help everyone grow rapidly, and in doing so, to help myself.',
+                    'I will never stop hustling and exploring. In the process of seeking PMF (product-market fit), I am also striving to find my personal pmf (people-mission fit). I am currently exploring this path, which is exactly the original intention behind building Talentry: to help everyone grow rapidly, and in doing so, to help myself.',
             },
             experience: {
-                pageTitle: 'Entrepreneurial & Operating Experience',
-                talentryTitle: 'Talentry Closed-door Summit & Talent Network',
-                talentryRole: 'Core Organizer / TTC Supply-side Partner',
+                internshipTitle: 'ZhenFund Internship',
+                internshipRole: 'Talent intern',
+                internshipDate: 'Jul 2026 - Present',
+                pageTitle: 'Talentry',
+                talentryRole: 'founder',
                 talentryDate: 'Mar 2026 - Present',
                 talentryPoint1:
-                    'Curating the Smartest Minds: Independently spearheaded invite-only closed-door events for early-stage AI talent. Successfully gathered a high-density network of top-tier technical brains, including GLM-5 core contributors, Kimi (Moonshot AI) prodigies, and Tsinghua Yao Class IOI national team members.',
-                talentryPoint2:
-                    'Ecosystem Building & Commercialization Validation: Backed by TTC founder Liaoyuan Ning, co-building an AI-native talent pool as core partner. Spearheading supply-side talent sourcing and platform logic design. Assisted in executing the TTC x Google closed-door summit.',
-                opencrawTitle: 'OpenClaw Hackathon',
-                opencrawRole:
-                    'Lead Organizer (in partnership with Zhongguancun College)',
-                opencrawDate: 'Aug 2025 - Mar 2026',
-                opencrawPoint1:
-                    'Navigating Complex Systems & ~¥10M Resource Leverage: Spotted the unmatched density of tech talent across Beijing\'s universities and initiated the "Beijing Hackathon" project. When the original organizing partner collapsed and top-tier universities hesitated to endorse, I broke the deadlock by bringing in Zhongguancun College and government stakeholders, re-crafted their narrative, and successfully co-unlocked a funding pool of nearly ¥10 million.',
-                opencrawPoint2:
-                    'Extreme Delivery & Ecosystem Building: Acted as the ultimate safety net when the official host team failed to execute. Capitalizing on the emerging OpenClaw wave, I stepped in as the operator and shipped a massive hackathon with a ¥1M+ prize pool in just one week, handling everything from ecosystem building and VIP curation to end-to-end community operations.',
-                firstVentureTitle: 'My First Bootstrapped Venture',
+                    'I have a genuine passion for helping others and strive to become a super connector.',
+                firstVentureTitle: 'First Pot of Gold',
                 firstVentureRole: 'Founder & Operator',
                 firstVentureDate: 'Summer 2024',
                 firstVenturePoint:
-                    'Zero to ¥100k in 15 Days: Spotted information asymmetry and high-margin opportunity in the local tutoring market. Hustled for leads via aggressive ground sales and paired them with top-tier peers (Tsinghua/Peking Univ. admits) who excelled academically but lacked sales skills. Executed a profitable closed-loop through resource leverage and commercial mechanics.',
+                    'After the 2024 gaokao, I looked for ways to fund a trip to Tibet. Taking inspiration from the New Oriental tutoring model, I earned my first six figures in RMB in half a month.',
 
-                technicalTitle: 'Technical DNA & The Hacker Spirit',
+                technicalTitle: 'Technical Exploration',
                 technicalSubtitle: 'LLM Research & Frontier Exploration',
                 technicalDate: 'Jun 2025 - Aug 2025',
                 technicalPoint:
-                    'Recruited into a DeepSeek-affiliated LLM research group working with Jingyang Yuan on foundational LLM, coding, and operator-level research.',
+                    'Worked with Jingyang from DeepSeek on LLM and Agent research.',
                 hackathonTitle: 'Hackathon Track Record',
                 hackathon1:
-                    '1st Place: Origin Community Party Nights Hackathon (Catalyzed the TTC partnership & Talentry launch).',
+                    '1st Place: Origin Community Party Nights Hackathon.',
                 hackathon2:
-                    "2nd Place: Tsinghua University Attrax Hackathon (Got ZhenFund's attention).",
-                hackathon3: '2nd Place: AdventureX Hackathon.',
-                hackerTitle: 'Bypassing the Gatekeepers (Hacker Spirit)',
+                    '2nd Place: Tsinghua University Attrax Hackathon.',
+                hackathon3: '2nd Place: AdventureX25 Hackathon.',
+                hackerTitle: 'Some Geek Things',
                 hackerPoint1:
-                    'Reverse Engineering: During the Tsinghua Attrax Hackathon, frustrated with cross-campus authentication blockers, I reverse-engineered and bypassed the USTB SSO gateway to secure campus-wide login access and ensure community safety.',
+                    "While participating in Attrax, I reverse-engineered USTB's SSO gateway to enable student-verified login, and obtained authentication information for all students at the university.",
+                hackerNetworkPoint:
+                    "Built a one-click deployment tool that bypasses IPv4 and connects directly over IPv6 for unmetered campus internet access. A few close friends use it for now; I'm wary of disciplinary trouble if it spreads too widely 🫠",
                 hackerPoint2:
-                    'Social Engineering: To gain access to what top 1% founders were building, I crafted a Five Yuan Capital official email address and successfully "hacked" my way into the highly exclusive MiraclePlus (YC China) Fall Demo Day.',
-                educationTitle: 'Education & Philosophy',
-                educationRole:
-                    'Sophomore, Telecommunications Engineering (Transferred from Civil Engineering)',
-                educationCurrent: 'Current',
-                educationPoint1:
-                    'My Vibe: Figured out the "college GPA & competition game" in month one, maxed out my credits, and immediately opted out of the rat race. I invest 100% of my energy into exploring frontier tech and connecting raw technical talent with the real commercial world.',
-                educationPoint2:
-                    'Core Traits: Aggressively anti-involution. I build things, break rules (respectfully), and actively hunt for high-density talent nodes.',
+                    'Created an official-looking Five Yuan Capital email address and successfully "hacked" my way into every MiraclePlus (YC China) demo day.',
             },
             projects: {
                 pageTitle: 'Projects',
@@ -142,32 +119,16 @@ export const translations: Record<Language, TranslationTree> = {
                 musicSubtitle: 'VENTURES',
                 softwarePageTitle: 'Software',
                 softwarePageSubtitle: 'Projects',
-                softwarePageIntro: 'Below is my own software project.',
-                beiketownTitle: 'Beiketown',
-                beiketownDescription:
-                    'Beiketown is an open 2D pixel world powered by the Openclaw multi-agent architecture. It allows any student to incubate their own Openclaw agents at a low cost or seamlessly plug in their existing ones. The entire ecosystem is governed by a top-level orchestrator agent managing the underlying agent swarm. Within this pixelated campus, students can break the ice and interact, fully supported by a built-in video chat system.',
-                beiketownCaption: 'Beiketown overview.',
-                beiketownCommunity:
-                    "At its core, Beiketown is a community, making governance and operations critical. To tackle this, I casually reverse-engineered USTB's SSO gateway to implement strict student-authenticated logins, effectively keeping the community secure and preventing out-of-bounds behavior.",
+                softwarePageIntro: 'No signature work yet (does this website count?).',
+                softwareThoughts:
+                    'I like thinking about how to embed AI into workflows, with the goal of making them completely hands-free.',
             },
             music: {
                 pageTitle: 'Music Odyssey',
                 pageSubtitle: 'SYSTEM.AUDIO',
-                sparkTitle: 'The Spark',
-                sparkDescription:
-                    'It all started at the age of 4. I remember walking past a piano store and being completely captivated by the melody of "Mariage d\'Amour." That single moment sparked a journey that would last years.',
-                peakTitle: 'The Peak & The Burnout',
-                peakDescription:
-                    "I progressed through the formal grading system at a relentless pace, completing Grade 10 by the summer before my 5th-grade year. However, the joy of playing was soon swallowed by the grind of exam-focused practice. After hitting that final milestone, I didn't touch the keys for nearly three years, the interest was simply gone.",
-                catharsisTitled: 'Catharsis in Chaos',
-                catharticDescription:
-                    'I picked up piano again in middle school as a way to decompress. Whenever the workload became overwhelming, I would find myself at the bench, tearing through Beethoven\'s Moonlight Sonata, 3rd Movement. It wasn\'t just playing; it was more like "pounding the piano" to release the stress (haha).',
-                softerTitle: 'A Softer Side',
-                softerDescription:
-                    "Throughout high school, my playing time dwindled, with one notable exception: I practiced Mozart's Twelve Variations on 'Ah vous dirai-je, Maman' just to make my little sister (who is 12 years younger than me) smile.",
-                futureTitle: 'The Next Sync',
-                futureDescription:
-                    "I've definitely grown rusty over the years, but my next goal is to set up a digital piano in my dorm. It's time to bring the music back into my daily routine.",
+                listening: 'I love listening to folk music, in both Chinese and English.',
+                piano:
+                    "When I was little, I wasn't into classical piano and only wanted to play pop songs. Now that I'm older, I've grown to enjoy playing classical music.",
             },
             contact: {
                 title: 'Contact',
@@ -234,7 +195,7 @@ export const translations: Record<Language, TranslationTree> = {
                 contact: '联系',
             },
             home: {
-                subtitle: '音乐 人工智能 旅行',
+                subtitle: '音乐 AI 旅行',
                 about: '关于',
                 experience: '经历',
                 projects: '项目',
@@ -248,71 +209,50 @@ export const translations: Record<Language, TranslationTree> = {
                 welcome: '欢迎',
                 greeting: '我是 Vincent Fang',
                 hustler:
-                    '你好，我是 Vincent Fang。我是一名正在折腾 AI、商业模式与链接人才的 Hustle。',
-                role: '目前我在北京科技大学就读，同时也是 Talentry 的主理人。如有任何问题或建议，欢迎通过邮件联系我：',
-                aboutMeTitle: '关于我',
-                aboutMe1:
-                    '从高中开始，我就对"规则"之外的事物充满好奇。为了逃避枯燥的题海，我在课桌下自制滑槽藏手机看世界；高三时为了拿到前往北京的门票，考入人大金融系，我剃光头发闭关三月，高考虽不理想但最终如愿来到北京。',
-                aboutMe2:
-                    '我始终相信，好奇心和不达目的不罢休的执行力，是打破任何系统的密钥。',
-                goldPotTitle: '第一桶金与创业直觉',
+                    '你好，我是 Vincent Fang。我热爱折腾 AI Agent、商业模式与人才链接。',
+                role: '我是北京科技大学 2024 级通信工程专业的本科生，目前在真格基金实习，同时运营着品牌 Talentry。如有任何问题或建议，欢迎通过邮件联系我：',
+                goldPotTitle: '第一桶金',
                 goldPot1:
-                    '2024 年高考结束，当我被家里拒绝前往西藏的旅行计划后，我并没有放弃。我意识到考后家长对孩子不掉队的焦虑，于是通过海报覆盖和"优秀学长"的背书，快速聚合了顶尖生源。在短短 15 天内，我通过整合同学的教学能力，赚到了人生第一个 10 万。',
-                goldPot2:
-                    '这段经历让我发现：我的天赋不仅仅在于解决问题，更在于发现杠杆并构建生态。',
-                aiCodeTitle: 'AI、代码与黑客松',
+                    '从小开始，我就对“规则”之外的事物充满好奇。2024 年高考结束，当我被家里拒绝前往西藏的旅行计划后，我开始寻找赚钱门道。于是从“新东方”模式入手，在半个月时间内赚到了人生第一个六位数。',
+                aiCodeTitle: '关于AI',
                 aiCode1:
-                    '进入大学后，我迅速对传统的加分套路祛魅，开始全心拥抱 AI 与 Coding。我曾跟随 DeepSeek 的成员参与 LLM 底层研究，也曾在黑客松上逆向破解过学校的 SSO 网关。但我逐渐意识到，与其他人相比，我的能力并不是与机器产生共鸣，而是在人与人的交谈中。',
-                aiCode2:
-                    '在过去的几个月里，我主导落地了奖金破百万的 Openclaw 大赛，和北京中关村学院一起从政府手里拿到了近千万级的活动投资。我认为极高密度的人才碰撞，是一种极快的成长方式。',
+                    '高二厌学的时候，经常上网找各种新鲜玩意儿，偶然间接触到 GPT，于是结缘。进入大学后自己探索：做开发、读 paper……也跟随一群优秀的 peers 做过 research。但我逐渐意识到，与其他人相比，我的长板并不是与机器产生共鸣，而是体现在与人交谈中。',
                 lookingForwardTitle: '展望未来',
                 lookingForward:
-                    '我不会停止折腾与探索，在寻找PMF(product-market fit)的过程中，我希望找到我的pmf(people-mission fit)，我正在探索，这也是我举办Talentry的初衷——帮助大家快速成长，也帮助我。',
+                    '我不会停止折腾与探索，在寻找PMF(product-market fit)的过程中，我希望找到我的pmf(people-mission fit)，我正在探索，这也是我做Talentry的初衷——帮助大家快速成长，也帮助我。',
             },
             experience: {
-                pageTitle: '核心战绩与操盘经历',
-                talentryTitle: 'Talentry 闭门会 & 人才库',
-                talentryRole: '核心主理人 / TTC供给侧合伙人',
+                internshipTitle: '真格基金实习',
+                internshipRole: 'Talent intern',
+                internshipDate: '2026.07 - 至今',
+                pageTitle: 'Talentry',
+                talentryRole: 'founder',
                 talentryDate: '2026.03 - 至今',
                 talentryPoint1:
-                    '顶尖 AI 人才精准捕获：独立操盘并定向邀请极早期 AI 核心人才，成功聚拢包括 GLM5 核心贡献者、Kimi天才少年及清华姚班 IOI 国家队成员在内的高密度技术大脑。',
-                talentryPoint2:
-                    '生态共建与商业化验证：获 TTC 创始人宁辽原全力背书及资源支持，作为核心 Partner 共建 AI-native 人才库，主导核心人才供给侧挖掘与平台运转逻辑设计。协助TTC与Google的闭门会落地。',
-                opencrawTitle: 'OpenClaw 赛事',
-                opencrawRole: '核心操盘手（联合中关村学院）',
-                opencrawDate: '2025.08 - 2026.03',
-                opencrawPoint1:
-                    '千万级资源撬动与复杂系统博弈：洞察北京高校技术人才密度极高的优势，主动发起京客松项目。在青年组织暴雷、清北高校存在背书顾虑的逆境下，成功破局引入中关村学院及政府背景，协助中关村学院重塑故事，共同撬动近千万级办赛资金。',
-                opencrawPoint2:
-                    '极限交付与生态构建：在主办方团队执行力极其欠缺的情况下，作为实际操盘手兜底。敏锐捕捉 OpenClaw 趋势，用一周时间极限落地破百万奖金池的大型赛事，统筹生态构建、嘉宾邀请及社区运营等工作。',
-                firstVentureTitle: '高中毕业首次商业实战',
+                    '对帮助他人有本真的热情，努力成为一个 super connector。',
+                firstVentureTitle: '第一桶金',
                 firstVentureRole: '操盘手',
                 firstVentureDate: '2024高考后',
                 firstVenturePoint:
-                    '15天实现 10万元 营收：洞察高考后与中考前的信息差与补习市场高溢价。利用极强的地推与谈判能力获取生源，并整合班级内考入清北复交的同学作为"师资供给侧"，通过高效的资源错配与商业杠杆，在 15 天内完成 10 万纯利闭环。',
+                    '2024 年高考后，为了攒钱去西藏旅行，我从“新东方”模式入手，在半个月内赚到了人生第一个六位数。',
 
-                technicalTitle: '技术背景与极客经历',
+                technicalTitle: '技术探索',
                 technicalSubtitle: '大模型科研与前沿探索',
                 technicalDate: '2025.06 - 2025.08',
                 technicalPoint:
-                    '跟随 DeepSeek 袁境阳老师深入参与 LLM、编码与算子层面的研究。',
+                    '跟随 DeepSeek Jingyang 参与 LLM、Agent 的 research。',
                 hackathonTitle: '黑客松战绩',
                 hackathon1:
-                    '获原点社区party nights黑客松 冠军（直接促成与 TTC 深度合作及 Talentry 的诞生）。',
-                hackathon2: '获清华大学Attrax 二等奖（与真格基金建联）。',
-                hackathon3: '获AdventureX二等奖',
-                hackerTitle: '逆向工程与打破常规',
+                    '获原点社区 Party Nights 黑客松冠军。',
+                hackathon2: '获清华大学 Attrax 二等奖。',
+                hackathon3: '获 AdventureX25 二等奖。',
+                hackerTitle: '一些geek行为',
                 hackerPoint1:
-                    '逆向工程：在参与清华Attrax黑客松期间，为解决跨校认证问题，通过逆向破解北科 SSO 网关，成功获取全校认证信息，实现校园认证登录，保证社区安全。',
+                    '在参与 Attrax 过程中，为实现学生认证登录，逆向了北科的 SSO 网关，同时拿到了全校同学的认证信息。',
+                hackerNetworkPoint:
+                    '做了个校园网绕过 IPv4 直连 IPv6 的一键部署工具，实现校园网免流，目前给好朋友用着，大范围传播怕挨处分🫠',
                 hackerPoint2:
-                    '社会工程学运用：制作五源资本官方邮箱，成功"Hack"进奇绩创坛秋季 Demo Day 内部现场。',
-                educationTitle: '教育背景',
-                educationRole: '北京科技大学 | 大一土木类 ➡ 大二通信工程在读',
-                educationCurrent: '在读',
-                educationPoint1:
-                    '入学首学期摸清高校常规打法，迅速打满竞赛加分后主动"祛魅"，将100%精力投入核心技术探索与真实商业世界的资源链接。',
-                educationPoint2:
-                    '特质：极度拒绝低效内卷，喜欢折腾新鲜事物，主动破圈寻找高密度人才场域。',
+                    '制作五源资本官方邮箱，成功“Hack”进每一期奇绩的 demo day 内部现场。',
             },
             projects: {
                 pageTitle: '项目',
@@ -325,32 +265,16 @@ export const translations: Record<Language, TranslationTree> = {
                 musicSubtitle: '创业',
                 softwarePageTitle: '软件',
                 softwarePageSubtitle: '项目',
-                softwarePageIntro: '以下是我自己的软件项目。',
-                beiketownTitle: 'Beiketown',
-                beiketownDescription:
-                    'Beiketown 是基于 Openclaw 的 multi-agent 架构下设计的开放 2D 像素世界。每一位同学可以低成本在平台上孵化自己的 Openclaw，或者直接接入自己的 Openclaw。有一个上层的 agent 总管下层的 agent 群。每一位同学可以在像素学校中进行破冰交流，同时我们接入了视频聊天系统。',
-                beiketownCaption: 'Beiketown 概览。',
-                beiketownCommunity:
-                    'Beiketown 本质是一个社区，管理和运营非常重要。所以我顺手逆向了北科的 SSO 网关，以此让大家通过学生认证登录，尽可能保障社区不出现出格问题。',
+                softwarePageIntro: '还没代表作（这个网站算吗）',
+                softwareThoughts:
+                    '喜欢思考如何把 AI 嵌入工作流中，目标是完全解放双手。',
             },
             music: {
                 pageTitle: '音乐旅程',
                 pageSubtitle: 'SYSTEM.AUDIO',
-                sparkTitle: '启程',
-                sparkDescription:
-                    '4 岁那年，路过琴行时被《梦中的婚礼》勾走了魂，从此踏上了学琴之路。',
-                peakTitle: '巅峰与倦怠',
-                peakDescription:
-                    '考级进度极快，小学四年级暑假我就拿下了 10 级。但也正是因为高强度的枯燥练习，让我一度失去了对钢琴的兴趣，考完级后的两三年里，我没再摸过一次琴。',
-                catharsisTitled: '救赎与宣泄',
-                catharticDescription:
-                    '初中时为了解闷重新开始弹琴。每当心情不好时，我就会疯狂弹奏贝多芬的《月光》第三乐章——那不是在演奏，那是在“砸琴”泄愤。',
-                softerTitle: '哄小孩儿',
-                softerDescription:
-                    '高中虽少有练习，但为了逗小我 12 岁的妹妹开心，我特意练了一首莫扎特的《小星星变奏曲》。',
-                futureTitle: '未来',
-                futureDescription:
-                    '虽然现在手生了，但我打算在宿舍添置一台电子琴，重新找回指尖的感觉。',
+                listening: '爱听民谣，中英都爱。',
+                piano:
+                    '对于钢琴，小时候不喜欢古典，只想弹流行；现在年纪大了，又喜欢弹古典。',
             },
             contact: {
                 title: '联系我',

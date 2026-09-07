@@ -1,5 +1,7 @@
 import React from 'react';
+import zhenfundInternship from '../../assets/pictures/zhenfund-internship.jpeg';
 import talentry from '../../assets/pictures/Talentry.jpg';
+import talentryGathering from '../../assets/pictures/talentry-gathering.jpg';
 import attrax from '../../assets/pictures/attrax.jpg';
 import partyNights from '../../assets/pictures/party nights.jpg';
 import ycChina from '../../assets/pictures/YC China.jpg';
@@ -20,11 +22,31 @@ const Experience: React.FC<ExperienceProps> = (props) => {
             <div style={styles.headerContainer}>
                 <div style={styles.header}>
                     <div style={styles.headerRow}>
-                        <h1>{t('showcase.experience.pageTitle')}</h1>
-                        <h4>{t('showcase.experience.talentryRole')}</h4>
+                        <h1>{t('showcase.experience.internshipTitle')}</h1>
                     </div>
                     <div style={styles.headerRow}>
-                        <h3>{t('showcase.experience.talentryTitle')}</h3>
+                        <h3>{t('showcase.experience.internshipRole')}</h3>
+                        <b>
+                            <p>{t('showcase.experience.internshipDate')}</p>
+                        </b>
+                    </div>
+                </div>
+            </div>
+            <div className="text-block" style={styles.indent}>
+                <img
+                    src={zhenfundInternship}
+                    style={styles.talentryImage}
+                    alt="ZhenFund internship gathering"
+                />
+            </div>
+
+            <div style={styles.headerContainer}>
+                <div style={styles.header}>
+                    <div style={styles.headerRow}>
+                        <h1>{t('showcase.experience.pageTitle')}</h1>
+                    </div>
+                    <div style={styles.headerRow}>
+                        <h3>{t('showcase.experience.talentryRole')}</h3>
                         <b>
                             <p>{t('showcase.experience.talentryDate')}</p>
                         </b>
@@ -35,39 +57,17 @@ const Experience: React.FC<ExperienceProps> = (props) => {
                 <ul>
                     <li>
                         <p>{t('showcase.experience.talentryPoint1')}</p>
-                    </li>
-                    <li>
-                        <p>{t('showcase.experience.talentryPoint2')}</p>
+                        <img
+                            src={talentryGathering}
+                            style={styles.talentryImage}
+                            alt="Talentry group gathering"
+                        />
+                        <br />
                         <img
                             src={talentry}
                             style={styles.talentryImage}
                             alt="Talentry"
                         />
-                    </li>
-                </ul>
-            </div>
-
-            <div style={styles.headerContainer}>
-                <div style={styles.header}>
-                    <div style={styles.headerRow}>
-                        <h1>{t('showcase.experience.opencrawTitle')}</h1>
-                        <h4>{t('showcase.experience.opencrawRole')}</h4>
-                    </div>
-                    <div style={styles.headerRow}>
-                        <h3>{t('showcase.experience.opencrawTitle')}</h3>
-                        <b>
-                            <p>{t('showcase.experience.opencrawDate')}</p>
-                        </b>
-                    </div>
-                </div>
-            </div>
-            <div className="text-block">
-                <ul>
-                    <li>
-                        <p>{t('showcase.experience.opencrawPoint1')}</p>
-                    </li>
-                    <li>
-                        <p>{t('showcase.experience.opencrawPoint2')}</p>
                     </li>
                 </ul>
             </div>
@@ -179,37 +179,15 @@ const Experience: React.FC<ExperienceProps> = (props) => {
                         <p>{t('showcase.experience.hackerPoint1')}</p>
                     </li>
                     <li>
+                        <p>{t('showcase.experience.hackerNetworkPoint')}</p>
+                    </li>
+                    <li>
                         <p>{t('showcase.experience.hackerPoint2')}</p>
                         <img
                             src={ycChina}
                             style={styles.talentryImage}
                             alt="YC China"
                         />
-                    </li>
-                </ul>
-            </div>
-
-            <div style={styles.headerContainer}>
-                <div style={styles.header}>
-                    <div style={styles.headerRow}>
-                        <h1>{t('showcase.experience.educationTitle')}</h1>
-                        <h4>{t('showcase.experience.educationRole')}</h4>
-                    </div>
-                    <div style={styles.headerRow}>
-                        <h3>{t('showcase.experience.educationRole')}</h3>
-                        <b>
-                            <p>{t('showcase.experience.educationCurrent')}</p>
-                        </b>
-                    </div>
-                </div>
-            </div>
-            <div className="text-block">
-                <ul>
-                    <li>
-                        <p>{t('showcase.experience.educationPoint1')}</p>
-                    </li>
-                    <li>
-                        <p>{t('showcase.experience.educationPoint2')}</p>
                     </li>
                 </ul>
             </div>
