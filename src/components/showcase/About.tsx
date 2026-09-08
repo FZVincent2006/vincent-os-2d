@@ -65,6 +65,14 @@ const About: React.FC<AboutProps> = (props) => {
                 <h3>{t('showcase.about.lookingForwardTitle')}</h3>
                 <br />
                 <p>{t('showcase.about.lookingForward')}</p>
+                <br />
+                <h3>{t('showcase.about.lifePlansTitle')}</h3>
+                <br />
+                <p>☑ {t('showcase.about.lifePlanTibet')}</p>
+                <br />
+                <p>☐ {t('showcase.about.lifePlanIceland')}</p>
+                <br />
+                <p>{t('showcase.about.lifePlansContinued')}</p>
             </div>
         </div>
     );

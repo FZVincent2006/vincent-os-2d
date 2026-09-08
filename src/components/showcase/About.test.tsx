@@ -11,7 +11,7 @@ test.each([
         aiStory: '关于AI',
         removed: /剃光头发|打破任何系统的密钥|这段经历让我发现|在过去的几个月里/,
         oldSection: '关于我',
-        future: '展望未来',
+        future: '未来',
     },
     {
         language: 'en',
@@ -19,7 +19,7 @@ test.each([
         aiStory: 'About AI',
         removed: /shaved my head|master keys to breaking any system|This experience made me realize|Over the past few months/,
         oldSection: 'About Me',
-        future: 'Looking Forward',
+        future: 'Future',
     },
 ])('renders the revised About sections in $language without removed stories', ({ language, firstStory, aiStory, removed, oldSection, future }) => {
     localStorage.setItem('site.language', language);

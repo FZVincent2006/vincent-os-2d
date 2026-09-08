@@ -70,9 +70,13 @@ export const translations: Record<Language, TranslationTree> = {
                 aiCodeTitle: 'About AI',
                 aiCode1:
                     "In my second year of high school, when I was feeling disengaged from school, I often went online looking for new and interesting things. That was how I stumbled upon GPT and began exploring AI. At university, I explored on my own: building software, reading papers... I also did research alongside a group of outstanding peers. Over time, though, I realized that my comparative strength was not in connecting with machines, but in talking with people.",
-                lookingForwardTitle: 'Looking Forward',
+                lookingForwardTitle: 'Future',
                 lookingForward:
                     'I will never stop hustling and exploring. In the process of seeking PMF (product-market fit), I am also striving to find my personal pmf (people-mission fit). I am currently exploring this path, which is exactly the original intention behind building Talentry: to help everyone grow rapidly, and in doing so, to help myself.',
+                lifePlansTitle: 'Life Plans',
+                lifePlanTibet: 'A solo trip to Tibet',
+                lifePlanIceland: 'A road trip through Iceland, "the end of the world", before turning 25',
+                lifePlansContinued: 'To be continued...',
             },
             experience: {
                 internshipTitle: 'ZhenFund Internship',
@@ -82,6 +86,8 @@ export const translations: Record<Language, TranslationTree> = {
                 talentryRole: 'founder',
                 talentryDate: 'Mar 2026 - Present',
                 talentryPoint1:
+                    'I mainly organize private gatherings for friends, and have also tried new things together with Google and ByteDance.',
+                talentryPoint2:
                     'I have a genuine passion for helping others and strive to become a super connector.',
                 firstVentureTitle: 'First Pot of Gold',
                 firstVentureRole: 'Founder & Operator',
@@ -217,9 +223,13 @@ export const translations: Record<Language, TranslationTree> = {
                 aiCodeTitle: '关于AI',
                 aiCode1:
                     '高二厌学的时候，经常上网找各种新鲜玩意儿，偶然间接触到 GPT，于是结缘。进入大学后自己探索：做开发、读 paper……也跟随一群优秀的 peers 做过 research。但我逐渐意识到，与其他人相比，我的长板并不是与机器产生共鸣，而是体现在与人交谈中。',
-                lookingForwardTitle: '展望未来',
+                lookingForwardTitle: '未来',
                 lookingForward:
                     '我不会停止折腾与探索，在寻找PMF(product-market fit)的过程中，我希望找到我的pmf(people-mission fit)，我正在探索，这也是我做Talentry的初衷——帮助大家快速成长，也帮助我。',
+                lifePlansTitle: '人生计划',
+                lifePlanTibet: '个人西藏旅行',
+                lifePlanIceland: '25岁前在“世界的尽头”冰岛自驾',
+                lifePlansContinued: '待续...',
             },
             experience: {
                 internshipTitle: '真格基金实习',
@@ -229,6 +239,8 @@ export const translations: Record<Language, TranslationTree> = {
                 talentryRole: 'founder',
                 talentryDate: '2026.03 - 至今',
                 talentryPoint1:
+                    '主要做一些朋友的闭门聚会，和 Google、字节也一起做过新鲜尝试。',
+                talentryPoint2:
                     '对帮助他人有本真的热情，努力成为一个 super connector。',
                 firstVentureTitle: '第一桶金',
                 firstVentureRole: '操盘手',

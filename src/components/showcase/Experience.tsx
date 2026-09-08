@@ -57,6 +57,9 @@ const Experience: React.FC<ExperienceProps> = (props) => {
                 <ul>
                     <li>
                         <p>{t('showcase.experience.talentryPoint1')}</p>
+                    </li>
+                    <li>
+                        <p>{t('showcase.experience.talentryPoint2')}</p>
                         <img
                             src={talentryGathering}
                             style={styles.talentryImage}
