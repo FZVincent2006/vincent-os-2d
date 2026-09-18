@@ -130,23 +130,10 @@ const Experience: React.FC<ExperienceProps> = (props) => {
                 <div style={styles.header}>
                     <div style={styles.headerRow}>
                         <h1>{t('showcase.experience.technicalTitle')}</h1>
-                        <h4>{t('showcase.experience.technicalSubtitle')}</h4>
-                    </div>
-                    <div style={styles.headerRow}>
-                        <h3>{t('showcase.experience.technicalSubtitle')}</h3>
-                        <b>
-                            <p>{t('showcase.experience.technicalDate')}</p>
-                        </b>
                     </div>
                 </div>
             </div>
             <div className="text-block">
-                <ul>
-                    <li>
-                        <p>{t('showcase.experience.technicalPoint')}</p>
-                    </li>
-                </ul>
-                <br />
                 <h3 style={styles.indent}>
                     {t('showcase.experience.hackathonTitle')}
                 </h3>

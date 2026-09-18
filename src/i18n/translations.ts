@@ -96,10 +96,6 @@ export const translations: Record<Language, TranslationTree> = {
                     'After the 2024 gaokao, I looked for ways to fund a trip to Tibet. Taking inspiration from the New Oriental tutoring model, I earned my first six figures in RMB in half a month.',
 
                 technicalTitle: 'Technical Exploration',
-                technicalSubtitle: 'LLM Research & Frontier Exploration',
-                technicalDate: 'Jun 2025 - Aug 2025',
-                technicalPoint:
-                    'Worked with Jingyang from DeepSeek on LLM and Agent research.',
                 hackathonTitle: 'Hackathon Track Record',
                 hackathon1:
                     '1st Place: Origin Community Party Nights Hackathon.',
@@ -249,10 +245,6 @@ export const translations: Record<Language, TranslationTree> = {
                     '2024 年高考后，为了攒钱去西藏旅行，我从“新东方”模式入手，在半个月内赚到了人生第一个六位数。',
 
                 technicalTitle: '技术探索',
-                technicalSubtitle: '大模型科研与前沿探索',
-                technicalDate: '2025.06 - 2025.08',
-                technicalPoint:
-                    '跟随 DeepSeek Jingyang 参与 LLM、Agent 的 research。',
                 hackathonTitle: '黑客松战绩',
                 hackathon1:
                     '获原点社区 Party Nights 黑客松冠军。',

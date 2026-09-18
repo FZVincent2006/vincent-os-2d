@@ -28,13 +28,19 @@ test('keeps the revised experience sections in order when switching languages', 
 
     expect(screen.getAllByRole('heading', { level: 1 }).map(heading => heading.textContent))
         .toEqual(['真格基金实习', 'Talentry', '第一桶金', '技术探索']);
-    expect(container.textContent).not.toMatch(/OpenClaw|教育背景/);
+    expect(container.textContent).not.toMatch(/OpenClaw|教育背景|DeepSeek|大模型科研与前沿探索|2025.06 - 2025.08/);
+    expect(screen.getByRole('heading', { name: '黑客松战绩' })).toBeInTheDocument();
+    expect(screen.getByRole('heading', { name: '一些geek行为' })).toBeInTheDocument();
+    expect(screen.getByText(/AdventureX25/)).toBeInTheDocument();
 
     fireEvent.click(screen.getByRole('button', { name: 'Switch language' }));
 
     expect(screen.getAllByRole('heading', { level: 1 }).map(heading => heading.textContent))
         .toEqual(['ZhenFund Internship', 'Talentry', 'First Pot of Gold', 'Technical Exploration']);
-    expect(container.textContent).not.toMatch(/OpenClaw|Education & Philosophy|真格基金实习/);
+    expect(container.textContent).not.toMatch(/OpenClaw|Education & Philosophy|真格基金实习|DeepSeek|LLM Research & Frontier Exploration|Jun 2025 - Aug 2025/);
+    expect(screen.getByRole('heading', { name: 'Hackathon Track Record' })).toBeInTheDocument();
+    expect(screen.getByRole('heading', { name: 'Some Geek Things' })).toBeInTheDocument();
+    expect(screen.getByText(/AdventureX25/)).toBeInTheDocument();
 });
 
 test('adds the Talentry group photo without dropping the existing experience photos', () => {
